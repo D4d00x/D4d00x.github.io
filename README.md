@@ -30,7 +30,7 @@ I welcome contributions to my website! If you have any suggestions, improvements
 
 ## Contact Me
 
-- **Email**: [Your Email Address](mailto:dado.cybersec@gmail.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/dzevad-dado-hatipovic-ab0637205)
+- **Email**: [dado.cybersec@gmail.com](mailto:dado.cybersec@gmail.com)
+- **LinkedIn**: [My LinkedIn](https://www.linkedin.com/in/dzevad-dado-hatipovic-ab0637205)
 
 
