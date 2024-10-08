@@ -14,6 +14,18 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Add custom styles for the badge iframe */
+            .badge-iframe {
+                position: fixed;
+                top: 20px; /* Adjust as needed */
+                right: 20px; /* Adjust as needed */
+                width: 300px; /* Adjust width */
+                height: 200px; /* Adjust height */
+                border: none;
+                z-index: 1000; /* Ensure it's on top of other elements */
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -36,6 +48,9 @@
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
+            <!-- Badge iframe -->
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3158575" class="badge-iframe"></iframe>
+
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
@@ -46,7 +61,7 @@
                         Verkstadsgatan 28 · Genevad Laholm, 312 40 · (+46) 70-734 75 21 ·
                         <a href="mailto:dado.cybersec@gmail.com">dado.cybersec@gmail.com</a>
                     </div>
-                    <p class="lead mb-5">I'm a Cyber Security Enthusiast - Digital Leader - Penetration tester Working as Digital leader is the art of using digital technologies to achieve desired business outcomes. It encompasses a variety of skills and abilities, including but not limited to digital transformation, digital strategy, innovation, and change management and also field of cybersecurity awareness!</p>
+                    <p class="lead mb-5">I'm a Cyber Security Enthusiast - Digital Leader - Penetration tester. Working as a digital leader is the art of using digital technologies to achieve desired business outcomes. It encompasses a variety of skills and abilities, including but not limited to digital transformation, digital strategy, innovation, and change management, and also the field of cybersecurity awareness!</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://linkedin.com/in/dzevad-dado-hatipovic-ab0637205"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/D4d00x"><i class="fab fa-github"></i></a>
@@ -65,7 +80,7 @@
                             <div class="subheading mb-3">Skanska Sweden AB</div>
                             <p>Involves spearheading the organization's digital transformation efforts by developing and executing strategies to leverage technology effectively. You guide teams in adopting digital tools, processes, and innovations to drive business growth, enhance customer experiences, and improve operational efficiency. responsible for safeguarding the organization's sensitive data, networks, and systems from cyber threats. This includes developing and implementing security policies, conducting risk assessments, managing security incidents, and ensuring compliance with regulations.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2017 - Februari 2024</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">December 2017 - February 2024</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -79,9 +94,9 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Network Administrator</h3>
                             <div class="subheading mb-3">Komvux! System management maintenance</div>
-                            <p> During this time, I was responsible for the maintenance and optimization of servers on the school's network. My tasks included everything from hardware assembly to management and administration in Windows 2000 Server.</p>
+                            <p>During this time, I was responsible for the maintenance and optimization of servers on the school's network. My tasks included everything from hardware assembly to management and administration in Windows 2000 Server.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Mars 2004 - Mars 2005</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2004 - March 2005</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
@@ -89,7 +104,7 @@
                             <div class="subheading mb-3">Made2Clean! Media Productions</div>
                             <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Mars 2001 - Mars 2004</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2001 - March 2004</span></div>
                     </div>
                 </div>
             </section>
@@ -110,10 +125,10 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">John Bauer high school of science and technology</h3>
-                            <div class="subheading mb-3">Technology Program</div>
-                            <p>GPA: 3.56</p>
+                            <div class="subheading mb-3">Kungsbacka</div>
+                            <div>High school diploma</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2000 - June 2003</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2000 - June 2004</span></div>
                     </div>
                 </div>
             </section>
@@ -122,39 +137,27 @@
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item"><i class="fab fa-html5"></i></li>
                         <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js"></i></li>
                         <li class="list-inline-item"><i class="fab fa-angular"></i></li>
                         <li class="list-inline-item"><i class="fab fa-react"></i></li>
                         <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
                         <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-php"></i></li>
                         <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-java"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-docker"></i></li>
                     </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cybersecurity, Pentesting
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
+                    <div class="subheading mb-3">Additional Skills</div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">Computer Networks</li>
+                        <li class="list-inline-item">Cybersecurity Awareness</li>
+                        <li class="list-inline-item">Web Development</li>
+                        <li class="list-inline-item">ITIL</li>
+                        <li class="list-inline-item">GDPR</li>
+                        <li class="list-inline-item">Digital Marketing</li>
                     </ul>
                 </div>
             </section>
@@ -163,54 +166,24 @@
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a cybersecurity developer, I enjoy most of my time being outdoors. In the winter, I am an avid snowboarder and novice ice bather. During the warmer months here in Sweden, I enjoy biking, surfing, and spending time outdoors with family.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef :-/, and I spend a large amount of my free time exploring the latest technology advancements in the back-end web development world and cybersecurity.</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">Hiking</li>
+                        <li class="list-inline-item">Gaming</li>
+                        <li class="list-inline-item">Computer Technology</li>
+                        <li class="list-inline-item">Network Security</li>
+                        <li class="list-inline-item">Traveling</li>
+                        <li class="list-inline-item">Cooking</li>
+                    </ul>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Awards-->
             <section class="resume-section" id="awards">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <h2 class="mb-5">Awards</h2>
                     <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Ethical Hacker Certification by Cisco
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Mobile Web Specialist - Google Certification
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            EC Higher Vocational Diploma - Cybersecurity Developer
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - Adobe Creative Jam 2008 (UI Design Category)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Place - Emerging Tech Competition 2008
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - Hackathon 2006
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            
-                        </li>
+                        <li class="mb-1"><i class="fa-li fa fa-trophy text-warning"></i>Best Cybersecurity Project - 2023</li>
+                        <li class="mb-1"><i class="fa-li fa fa-trophy text-warning"></i>Excellence in Web Development - 2022</li>
                     </ul>
                 </div>
             </section>
