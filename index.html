@@ -15,14 +15,13 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            /* Add custom styles for the badge iframe */
-            .badge-iframe {
+            /* Add custom styles for the badge image */
+            .badge-image {
                 position: fixed;
                 top: 20px; /* Adjust as needed */
                 right: 20px; /* Adjust as needed */
-                width: 300px; /* Adjust width */
-                height: 200px; /* Adjust height */
-                border: none;
+                width: 100px; /* Adjust width */
+                height: auto; /* Maintain aspect ratio */
                 z-index: 1000; /* Ensure it's on top of other elements */
             }
         </style>
@@ -48,8 +47,8 @@
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
-            <!-- Badge iframe -->
-            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3158575" class="badge-iframe"></iframe>
+            <!-- Badge Image -->
+            <img src="https://tryhackme-badges.s3.amazonaws.com/dado.cybersec.png" alt="Your Image Badge" class="badge-image" />
 
             <!-- About-->
             <section class="resume-section" id="about">
@@ -122,13 +121,14 @@
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2021 - June 2023</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">John Bauer high school of science and technology</h3>
-                            <div class="subheading mb-3">Kungsbacka</div>
-                            <div>High school diploma</div>
+                            <h3 class="mb-0">Associate in Computer Networking</h3>
+                            <div class="subheading mb-3">University of the People</div>
+                            <div>Data Networking - Network Security</div>
+                            <p>GPA: 3.57</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2000 - June 2004</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2020 - June 2021</span></div>
                     </div>
                 </div>
             </section>
@@ -137,27 +137,31 @@
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-php"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-java"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-docker"></i></li>
-                    </ul>
-                    <div class="subheading mb-3">Additional Skills</div>
-                    <ul class="list-inline">
-                        <li class="list-inline-item">Computer Networks</li>
-                        <li class="list-inline-item">Cybersecurity Awareness</li>
-                        <li class="list-inline-item">Web Development</li>
-                        <li class="list-inline-item">ITIL</li>
-                        <li class="list-inline-item">GDPR</li>
-                        <li class="list-inline-item">Digital Marketing</li>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Penetration Testing
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Network Security
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> System Administration
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Risk Management
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Digital Transformation
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> ITIL
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Cloud Computing
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Cybersecurity Awareness
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -166,13 +170,19 @@
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <ul class="list-inline">
-                        <li class="list-inline-item">Hiking</li>
-                        <li class="list-inline-item">Gaming</li>
-                        <li class="list-inline-item">Computer Technology</li>
-                        <li class="list-inline-item">Network Security</li>
-                        <li class="list-inline-item">Traveling</li>
-                        <li class="list-inline-item">Cooking</li>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Cybersecurity
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Digital Leadership
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Penetration Testing
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-check"></i> Network Security
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -182,14 +192,19 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Awards</h2>
                     <ul class="fa-ul mb-0">
-                        <li class="mb-1"><i class="fa-li fa fa-trophy text-warning"></i>Best Cybersecurity Project - 2023</li>
-                        <li class="mb-1"><i class="fa-li fa fa-trophy text-warning"></i>Excellence in Web Development - 2022</li>
+                        <li>
+                            <i class="fa-li fa fa-trophy text-warning"></i> Best Cybersecurity Student - 2023
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-trophy text-warning"></i> Cybersecurity Innovation Award - 2023
+                        </li>
                     </ul>
                 </div>
             </section>
         </div>
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
