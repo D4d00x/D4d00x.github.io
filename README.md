@@ -14,5 +14,6 @@ I am currently working as an application security tester at ICU Tech.
 
 ---
 [![](https://visitcount.itsvg.in/api?id=D4d00x&icon=0&color=0)](https://visitcount.itsvg.in)
+<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3158575" style='border:none;'></iframe>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
