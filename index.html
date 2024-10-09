@@ -22,10 +22,9 @@
             height: auto;
             cursor: pointer;
             transition: transform 0.3s ease;
-            margin: 20px auto; /* Centrera badgen horisontellt och ge avstånd */
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Centrera innehållet vertikalt */
+            margin-left: 10px; /* Avstånd från Facebook-länken */
+            display: inline-block; /* Gör så att badgen kan stå bredvid text */
+            vertical-align: middle; /* Justera vertikalt */
         }
 
         /* Tooltip-styling */
@@ -53,6 +52,15 @@
         /* Större badge vid hover */
         .badge-container:hover {
             transform: scale(1.2);
+        }
+
+        .social-icons a {
+            color: #fff; /* Färg på ikoner */
+            margin-right: 15px; /* Avstånd mellan ikoner */
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00; /* Färg på ikoner vid hover */
         }
     </style>
 </head>
@@ -84,11 +92,6 @@
         <!-- About-->
         <section class="resume-section" id="about">
             <div class="resume-section-content">
-                <!-- Inbäddad TryHackMe Badge, nu ovanför namnet -->
-                <div class="badge-container" onclick="window.location.href='https://tryhackme.com/';">
-                    <img src="https://tryhackme-badges.s3.amazonaws.com/dado.cybersec.png" alt="Your Image Badge" />
-                    <span class="tooltip">This is where I hack</span>
-                </div>
                 <h1 class="mb-0">
                     <span class="text-primary">Hatipovic Dado</span>
                 </h1>
@@ -100,7 +103,12 @@
                 <div class="social-icons">
                     <a class="social-icon" href="https://linkedin.com/in/dzevad-dado-hatipovic-ab0637205"><i class="fab fa-linkedin-in"></i></a>
                     <a class="social-icon" href="https://github.com/D4d00x"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-icon" href="https://www.facebook.com/yourfacebookprofile"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Inbäddad TryHackMe Badge, nu bredvid Facebook-länken -->
+                    <div class="badge-container" onclick="window.location.href='https://tryhackme.com/';">
+                        <img src="https://tryhackme-badges.s3.amazonaws.com/dado.cybersec.png" alt="Your Image Badge" />
+                        <span class="tooltip">This is where I hack</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -137,18 +145,82 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Web Design Intern</h3>
                         <div class="subheading mb-3">Made2Clean! Media Productions</div>
-                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">January 2002 - February 2004</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">January 2002 - March 2004</span></div>
                 </div>
             </div>
         </section>
         <hr class="m-0" />
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <!-- Education-->
+        <section class="resume-section" id="education">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Education</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Master of Computer Science</h3>
+                        <div class="subheading mb-3">Halmstad University</div>
+                        <p>Majoring in Cyber Security. Focus on network security, penetration testing, and cybersecurity awareness programs.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2010 - 2012</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Bachelor of Computer Science</h3>
+                        <div class="subheading mb-3">Halmstad University</div>
+                        <p>Completed coursework in programming, database management, and web development.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">2007 - 2010</span></div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Skills-->
+        <section class="resume-section" id="skills">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Skills</h2>
+                <ul class="fa-ul mb-0">
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Cybersecurity Awareness</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Digital Strategy</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Penetration Testing</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Data Protection</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Network Security</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Incident Response</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Technical Support</li>
+                </ul>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Interests-->
+        <section class="resume-section" id="interests">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Interests</h2>
+                <ul class="fa-ul mb-0">
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Ethical Hacking</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Cybersecurity Research</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Open Source Projects</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Networking</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Web Development</li>
+                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Outdoor Activities</li>
+                </ul>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Awards-->
+        <section class="resume-section" id="awards">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Awards & Certifications</h2>
+                <ul class="fa-ul mb-0">
+                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Certified Ethical Hacker (CEH)</li>
+                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>CompTIA Security+</li>
+                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Microsoft Certified: Azure Security Engineer Associate</li>
+                </ul>
+            </div>
+        </section>
+        <hr class="m-0" />
     </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6x9C1E7C4blUP6m5f17aWc5qVNC/pXXe1MOf4G7D5r5/uSn" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6x9C1E7C4blUP6m5f17aWc5qVNC/pXXe1MOf4G7D5r5/uSn" crossorigin="anonymous"></script>
 </body>
 </html>
