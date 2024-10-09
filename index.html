@@ -17,14 +17,16 @@
     <style>
         /* Styling för den inbäddade TryHackMe-badgen */
         .badge-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 100px;
+            position: absolute;
+            top: 20px; /* Avstånd från toppen */
+            right: 20px; /* Avstånd från höger kant */
+            width: 150px;
             height: auto;
-            z-index: 1000;
             cursor: pointer;
             transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centrera innehållet vertikalt */
         }
 
         /* Tooltip-styling */
@@ -37,7 +39,6 @@
             border-radius: 5px;
             position: absolute;
             top: -30px;
-            right: 0;
             z-index: 1;
             font-size: 12px;
             opacity: 0;
@@ -81,7 +82,7 @@
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
-        <!-- Inbäddad TryHackMe Badge -->
+        <!-- Inbäddad TryHackMe Badge, nu positionerad i övre högra hörnet -->
         <div class="badge-container" onclick="window.location.href='https://tryhackme.com/';">
             <img src="https://tryhackme-badges.s3.amazonaws.com/dado.cybersec.png" alt="Your Image Badge" />
             <span class="tooltip">This is where I hack</span>
@@ -140,7 +141,7 @@
                         <div class="subheading mb-3">Made2Clean! Media Productions</div>
                         <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">March 2001 - March 2004</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">January 2002 - February 2004</span></div>
                 </div>
             </div>
         </section>
