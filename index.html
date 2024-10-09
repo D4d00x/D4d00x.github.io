@@ -17,13 +17,12 @@
     <style>
         /* Styling för den inbäddade TryHackMe-badgen */
         .badge-container {
-            position: absolute;
-            top: 20px; /* Avstånd från toppen */
-            right: 20px; /* Avstånd från höger kant */
+            position: relative; /* Relativ positionering */
             width: 150px;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s ease;
+            margin: 20px auto; /* Centrera badgen horisontellt och ge avstånd */
             display: flex;
             justify-content: center;
             align-items: center; /* Centrera innehållet vertikalt */
@@ -82,15 +81,14 @@
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
-        <!-- Inbäddad TryHackMe Badge, nu positionerad i övre högra hörnet -->
-        <div class="badge-container" onclick="window.location.href='https://tryhackme.com/';">
-            <img src="https://tryhackme-badges.s3.amazonaws.com/dado.cybersec.png" alt="Your Image Badge" />
-            <span class="tooltip">This is where I hack</span>
-        </div>
-
         <!-- About-->
         <section class="resume-section" id="about">
             <div class="resume-section-content">
+                <!-- Inbäddad TryHackMe Badge, nu ovanför namnet -->
+                <div class="badge-container" onclick="window.location.href='https://tryhackme.com/';">
+                    <img src="https://tryhackme-badges.s3.amazonaws.com/dado.cybersec.png" alt="Your Image Badge" />
+                    <span class="tooltip">This is where I hack</span>
+                </div>
                 <h1 class="mb-0">
                     <span class="text-primary">Hatipovic Dado</span>
                 </h1>
