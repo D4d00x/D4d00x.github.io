@@ -10886,9 +10886,13 @@ p.lead {
   background: linear-gradient(to bottom, #333, #000);
 }
 #sideNav .navbar-nav .nav-item .nav-link {
-  color: #00ff00; /* Grön textfärg */
+  color: #00ff00; /* Standard grön färg */
+  transition: color 0.3s ease-in-out; /* Smidig färgövergång */
 }
 
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  color: #008000; /* Mörkare grön vid hover */
+}
 @media (min-width: 992px) {
   #sideNav {
     padding-left: 0;
