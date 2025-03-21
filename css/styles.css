@@ -10879,6 +10879,15 @@ p.lead {
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e;
 }
+#sideNav {
+  background: black;
+}
+#sideNav {
+  background: linear-gradient(to bottom, #333, #000);
+}
+#sideNav .navbar-nav .nav-item .nav-link {
+  color: #00ff00; /* Grön textfärg */
+}
 
 @media (min-width: 992px) {
   #sideNav {
