@@ -1,230 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dado Hatipovic</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-        /* Styling för den inbäddade TryHackMe-badgen */
-        .badge-container {
-            position: relative; /* Relativ positionering */
-            width: 150px;
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            margin-left: 10px; /* Avstånd från Facebook-länken */
-            display: inline-block; /* Gör så att badgen kan stå bredvid text */
-            vertical-align: middle; /* Justera vertikalt */
-        }
-
-        /* Tooltip-styling */
-        .badge-container .tooltip {
-            visibility: hidden;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            padding: 5px;
-            border-radius: 5px;
-            position: absolute;
-            top: -30px;
-            z-index: 1;
-            font-size: 12px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        /* Visa tooltip vid hover */
-        .badge-container:hover .tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /* Större badge vid hover */
-        .badge-container:hover {
-            transform: scale(1.2);
-        }
-
-        .social-icons a {
-            color: #fff; /* Färg på ikoner */
-            margin-right: 15px; /* Avstånd mellan ikoner */
-        }
-
-        .social-icons a:hover {
-            color: #ffcc00; /* Färg på ikoner vid hover */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dado Hatipovic | Fullstack Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="profile.jpg" />
 </head>
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Dado Hatipovic</span>
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." />
-            </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Page Content-->
-    <div class="container-fluid p-0">
-        <!-- About-->
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">
-                    <span class="text-primary">Hatipovic Dado</span>
-                </h1>
-                <div class="subheading mb-5">
-                    "Think outside the box; hack inside it."
-                    <a href="mailto:dado.cybersec@gmail.com">dado.cybersec@gmail.com</a>
-                </div>
-                <p class="lead mb-5">I'm a Cyber Security Enthusiast - Digital Leader - Penetration tester. Working as a digital leader is the art of using digital technologies to achieve desired business outcomes. It encompasses a variety of skills and abilities, including but not limited to digital transformation, digital strategy, innovation, and change management, and also the field of cybersecurity awareness!</p>
-                <div class="social-icons">
-                    <a class="social-icon" href="https://linkedin.com/in/dzevad-dado-hatipovic-ab0637205"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="https://github.com/D4d00x"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="https://www.facebook.com/yourfacebookprofile"><i class="fab fa-facebook-f"></i></a>
-                    <!-- Inbäddad TryHackMe Badge, nu bredvid Facebook-länken -->
-                    <div class="badge-container" onclick="window.location.href='https://tryhackme.com/';">
-                        <img src="https://tryhackme-badges.s3.amazonaws.com/dado.cybersec.png" alt="Your Image Badge" />
-                        <span class="tooltip">This is where I hack</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Experience-->
-        <section class="resume-section" id="experience">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Digitalleader and Infosec</h3>
-                        <div class="subheading mb-3">Skanska Sweden AB</div>
-                        <p>Involves spearheading the organization's digital transformation efforts by developing and executing strategies to leverage technology effectively. You guide teams in adopting digital tools, processes, and innovations to drive business growth, enhance customer experiences, and improve operational efficiency. responsible for safeguarding the organization's sensitive data, networks, and systems from cyber threats. This includes developing and implementing security policies, conducting risk assessments, managing security incidents, and ensuring compliance with regulations.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">December 2017 - February 2024</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Digitalleader</h3>
-                        <div class="subheading mb-3">MA Gruppen AB</div>
-                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">June 2012 - November 2017</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Network Administrator</h3>
-                        <div class="subheading mb-3">Komvux! System management maintenance</div>
-                        <p>During this time, I was responsible for the maintenance and optimization of servers on the school's network. My tasks included everything from hardware assembly to management and administration in Windows 2000 Server.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">March 2004 - March 2005</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Web Design Intern</h3>
-                        <div class="subheading mb-3">Made2Clean! Media Productions</div>
-                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">January 2002 - March 2004</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Education-->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Higher Vocational Education Diploma</h3>
-                        <div class="subheading mb-3">EC Utbildning</div>
-                        <p>Majoring in Cyber Security. Focus on network security, penetration testing, and cybersecurity awareness programs.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2021 - 2023</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Bachelor of Computer Science</h3>
-                        <div class="subheading mb-3">JOHN BAUER GYMNASIET</div>
-                        <p>Completed Networking, programming, database management, and web development.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2001 - 2003</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Skills-->
-        <section class="resume-section" id="skills">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <ul class="fa-ul mb-0">
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Cybersecurity Awareness</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Digital Strategy</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Penetration Testing</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Data Protection</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Network Security</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Incident Response</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Technical Support</li>
-                </ul>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Interests-->
-        <section class="resume-section" id="interests">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Interests</h2>
-                <ul class="fa-ul mb-0">
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Ethical Hacking</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Cybersecurity Research</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Open Source Projects</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Networking</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Web Development</li>
-                    <li class="mb-2"><i class="fa-li fa fa-check"></i>Outdoor Activities</li>
-                </ul>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Awards-->
-        <section class="resume-section" id="awards">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Awards & Certifications</h2>
-                <ul class="fa-ul mb-0">
-                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Cisco Certified Ethical Hacker (CCEH)</li>
-                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Junior Cybersecurity Analyst</li>
-                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Junior Penetration Tester INE Security</li>
-                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>TryHackMe-Penetration Tester Certified</li>
-                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Cisco Network Defense Certified</li>
-                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Cisco Endpoit Security ESec Certified</li>
-                    <li class="mb-2"><i class="fa-li fa fa-trophy"></i>Microsoft Azure Certifications</li>
-                </ul>
-            </div>
-        </section>
-        <hr class="m-0" />
+<body>
+  <header>
+    <img src="profile.jpg" alt="Dado Hatipovic" />
+    <h1>Dado Hatipovic</h1>
+    <h3>Fullstack Engineer</h3>
+    <p>I'm a Cyber Security Enthusiast - Coder - Penetration Tester. Working as a digital leader is the art of using digital technologies to achieve desired business outcomes. It encompasses a variety of skills and abilities, including but not limited to digital transformation, digital strategy, innovation, and change management, and also the field of cybersecurity awareness!</p>
+  </header>
+
+  <section id="skills">
+    <h2>Core Competencies</h2>
+    <div class="skills-list">
+      <span>Cybersecurity Awareness</span>
+      <span>Digital Strategy</span>
+      <span>Penetration Testing</span>
+      <span>Data Protection</span>
+      <span>Network Security</span>
+      <span>Incident Response</span>
+      <span>Technical Support</span>
     </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6x9C1E7C4blUP6m5f17aWc5qVNC/pXXe1MOf4G7D5r5/uSn" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6x9C1E7C4blUP6m5f17aWc5qVNC/pXXe1MOf4G7D5r5/uSn" crossorigin="anonymous"></script>
+  </section>
+
+  <section id="tech">
+    <h2>Tech Stack</h2>
+    <div class="tech-stack">
+      <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
+      <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+      <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+      <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+      <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+      <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
+      <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
+      <img src="https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="Vue.js" />
+      <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+      <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
+      <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt="Express.js" />
+      <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
+      <img src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" />
+      <img src="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34" alt="Firebase" />
+    </div>
+  </section>
+
+  <section id="projects-section">
+    <h2>Projects / Work</h2>
+    <div id="repo-list" class="projects-list">
+      <p>Loading projects...</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <p>Email (Personal): <a href="mailto:dado.cybersec@gmail.com">dado.cybersec@gmail.com</a></p>
+      <p>Email (Work): <a href="mailto:dado@torggruppen.se">dado@torggruppen.se</a></p>
+      <p><a href="https://github.com/D4d00x" target="_blank">GitHub Profile</a></p>
+      <p><a href="https://behance.net/D4d00x" target="_blank">Behance</a></p>
+      <p><a href="https://www.linkedin.com/in/dado-hatipovic/" target="_blank">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Dado Hatipovic | Built with ❤️ using HTML, CSS & JS</p>
+  </footer>
+
+  <script>
+    async function fetchRepos() {
+      const username = 'D4d00x';
+      const url = `https://api.github.com/users/${username}/repos?sort=pushed&per_page=6`;
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error(`GitHub API error: ${resp.status}`);
+        const repos = await resp.json();
+        const listEl = document.getElementById('repo-list');
+        listEl.innerHTML = '';
+
+        repos.forEach(repo => {
+          const repoEl = document.createElement('div');
+          repoEl.classList.add('project');
+
+          const title = document.createElement('h3');
+          title.textContent = repo.name;
+
+          const desc = document.createElement('p');
+          desc.textContent = repo.description || 'No description provided.';
+
+          const link = document.createElement('a');
+          link.href = repo.html_url;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = 'View on GitHub →';
+
+          repoEl.appendChild(title);
+          repoEl.appendChild(desc);
+          repoEl.appendChild(link);
+
+          listEl.appendChild(repoEl);
+        });
+
+        if (repos.length === 0) {
+          listEl.textContent = 'No public repositories found.';
+        }
+      } catch (err) {
+        const listEl = document.getElementById('repo-list');
+        listEl.innerHTML = `<p>Error loading projects: ${err.message}</p>`;
+        console.error(err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', fetchRepos);
+  </script>
 </body>
 </html>
