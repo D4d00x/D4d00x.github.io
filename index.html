@@ -3,166 +3,828 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dado Hatipovic | Fullstack Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Dado Hatipovic - Fullstack Engineer & Application Security Tester. Ethical hacker passionate about cybersecurity and penetration testing.">
+    <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, fullstack developer, application security">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Dado Hatipovic | Fullstack Engineer & Security Tester">
+    <meta property="og:description" content="Cyber Security Enthusiast - Ethical Hacker - Penetration Tester">
+    <meta property="og:type" content="website">
+
+    <title>Dado Hatipovic | Fullstack Engineer & Security Tester</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* === CSS Variables - Cyber Theme === */
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #0d1117;
+            --bg-card: #151b2e;
+            --bg-card-hover: #1a2236;
+
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+
+            --accent-green: #00ff41;
+            --accent-cyan: #00f0ff;
+            --accent-purple: #b026ff;
+            --accent-red: #ff0055;
+
+            --border-color: #21262d;
+            --border-accent: rgba(0, 255, 65, 0.3);
+
+            --glow-green: 0 0 20px rgba(0, 255, 65, 0.5);
+            --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.5);
+
+            --font-code: 'Fira Code', monospace;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        /* === Reset & Base === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* === Animated Background Grid === */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* === Typography === */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .code-text {
+            font-family: var(--font-code);
+        }
+
+        /* === Navigation === */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 14, 39, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 14, 39, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            font-family: var(--font-code);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo::before {
+            content: '>';
+            color: var(--accent-cyan);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+        }
+
+        .nav-links a::before {
+            content: '//';
+            color: var(--accent-green);
+            opacity: 0;
+            margin-right: 0.3rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        .nav-links a:hover::before {
+            opacity: 1;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--accent-green);
+            transition: all 0.3s ease;
+        }
+
+        /* === Hero Section === */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-green);
+            box-shadow: var(--glow-green);
+            margin: 0 auto 2rem;
+            object-fit: cover;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: var(--font-code);
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-family: var(--font-code);
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .terminal-text {
+            font-family: var(--font-code);
+            color: var(--accent-green);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .terminal-text::before {
+            content: '$ ';
+            color: var(--accent-cyan);
+        }
+
+        /* === Social Links === */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-card);
+            border: 2px solid var(--border-accent);
+            color: var(--accent-green);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: var(--font-code);
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--accent-green);
+            color: var(--bg-primary);
+            box-shadow: var(--glow-green);
+            transform: translateY(-3px);
+        }
+
+        .social-btn.email {
+            border-color: rgba(0, 240, 255, 0.3);
+            color: var(--accent-cyan);
+        }
+
+        .social-btn.email:hover {
+            background: var(--accent-cyan);
+            box-shadow: var(--glow-cyan);
+        }
+
+        /* === Section Styles === */
+        .section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+            font-family: var(--font-code);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::before {
+            content: '<';
+            color: var(--accent-cyan);
+            margin-right: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '/>';
+            color: var(--accent-cyan);
+            margin-left: 0.5rem;
+        }
+
+        /* === About Section === */
+        .about-content {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-green);
+        }
+
+        .skill-card h3 {
+            color: var(--accent-green);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-code);
+        }
+
+        /* === Projects Section === */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-5px);
+            box-shadow: var(--glow-green);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: var(--accent-cyan);
+            font-family: var(--font-code);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .project-language {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .language-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-green);
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-family: var(--font-code);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-accent);
+            color: var(--accent-green);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-family: var(--font-code);
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--accent-green);
+            color: var(--bg-primary);
+            box-shadow: var(--glow-green);
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+            font-family: var(--font-code);
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        /* === Footer === */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 6rem;
+        }
+
+        .footer p {
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+        }
+
+        /* === Responsive Design === */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 14, 39, 0.98);
+                padding: 2rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 0 1rem;
+            }
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header & Navigation -->
-    <header class="bg-gray-900/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-xl font-bold">
-                    <a href="#hero" class="hover:text-gray-300 transition-colors duration-300">Portfolio</a>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-300">About</a>
-                    <a href="#skills" class="text-gray-300">Skills</a>
-                    <a href="#tech" class="text-gray-300">Tech Stack</a>
-                    <a href="#contact" class="text-gray-300">Contact</a>
-                </nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">D4d00x</a>
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <img src="./dade.png" alt="Dado Hatipovic" class="hero-image">
+            <h1 class="hero-title">Dado Hatipovic</h1>
+            <p class="hero-subtitle">Fullstack Engineer & Security Tester</p>
+            <p class="hero-tagline">Cyber Security Enthusiast • Ethical Hacker • Penetration Tester</p>
+            <p class="terminal-text">whoami | grep -i 'security' | xargs echo</p>
+
+            <div class="social-links">
+                <a href="https://github.com/D4d00x" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/dzevad-dado-hatipovic-ab0637205" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:dado.cybersec@gmail.com" class="social-btn email">
+                    <span>Email</span>
+                </a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="container mx-auto px-6 pt-24">
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">about</h2>
+        <div class="about-content">
+            <p class="about-text">
+                I'm a <strong>Cyber Security Enthusiast</strong>, <strong>Fullstack Engineer</strong>, and <strong>Application Security Tester</strong> currently working at ICU Tech.
+                I believe working as a digital leader is the art of using digital technologies to achieve desired business outcomes.
+                It encompasses a variety of skills and abilities, including digital transformation, digital strategy, innovation,
+                change management, and most importantly - <strong>cybersecurity awareness</strong>.
+            </p>
+            <p class="about-text">
+                My expertise spans across penetration testing, secure code review, network security, and incident response.
+                I'm passionate about building secure, scalable applications and helping organizations strengthen their security posture.
+            </p>
 
-        <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center justify-center text-center section">
-            <div class="flex flex-col items-center">
-                <img src="./dade.png" alt="Dado Hatipovic" class="w-48 h-48 rounded--full mb-6 border-4 border-gray-700 shadow-lg">
-                <h1 class="text-5xl md:text-7xl font-bold mb-2">Dado Hatipovic</h1>
-                <h2 class="text-2xl md:text-3xl accent-blue">Fullstack Engineer</h2>
-                <p class="mt-4 text-lg text-gray-400 max-w-2xl">Cyber Security Enthusiast - Coder - Penetration Tester</p>
-            </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about" class="py-20 section">
-            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
-            <div class="max-w-3xl mx-auto bg-gray-900 rounded-xl p-8 shadow-2xl border border-gray-800">
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    I'm a Cyber Security Enthusiast, Coder, and Penetration Tester. I believe working as a digital leader is the art of using digital technologies to achieve desired business outcomes. It encompasses a variety of skills and abilities, including but not limited to digital transformation, digital strategy, innovation, and change management, and also the field of cybersecurity awareness!
-                </p>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 section">
-            <h2 class="text-4xl font-bold text-center mb-12">Cybersecurity Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors duration-300">
-                    <h3 class="text-xl font-semibold accent-green mb-2">Cybersecurity Awareness</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>// Cybersecurity</h3>
+                    <p>Penetration Testing, Security Audits, Vulnerability Assessment, OWASP Top 10</p>
                 </div>
-                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors duration-300">
-                    <h3 class="text-xl font-semibold accent-green mb-2">Digital Strategy</h3>
+                <div class="skill-card">
+                    <h3>// Development</h3>
+                    <p>Fullstack Development, API Design, Database Architecture, Cloud Services</p>
                 </div>
-                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors duration-300">
-                    <h3 class="text-xl font-semibold accent-green mb-2">Penetration Testing</h3>
-                </div>
-                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors duration-300">
-                    <h3 class="text-xl font-semibold accent-green mb-2">Data Protection</h3>
-                </div>
-                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors duration-300">
-                    <h3 class="text-xl font-semibold accent-green mb-2">Network Security</h3>
-                </div>
-                <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors duration-300">
-                    <h3 class="text-xl font-semibold accent-green mb-2">Incident Response</h3>
-                </div>
-                 <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center hover:border-green-500/50 transition-colors duration-300 md:col-start-2 lg:col-start-auto">
-                    <h3 class="text-xl font-semibold accent-green mb-2">Technical Support</h3>
+                <div class="skill-card">
+                    <h3>// Security Operations</h3>
+                    <p>Incident Response, Network Security, Data Protection, Security Awareness</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Tech Stack Section -->
-        <section id="tech" class="py-20 section">
-            <h2 class="text-4xl font-bold text-center mb-12">💻 Tech Stack</h2>
-            <div class="flex flex-wrap justify-center items-center gap-4 max-w-4xl mx-auto">
-                <img class="tech-badge" src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="C#">
-                <img class="tech-badge" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-                <img class="tech-badge" src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
-                <img class="tech-badge" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
-                <img class="tech-badge" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-                <img class="tech-badge" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-                <img class="tech-badge" src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go">
-                <img class="tech-badge" src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
-                <img class="tech-badge" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C">
-                <img class="tech-badge" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
-                <img class="tech-badge" src="https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515" alt="YAML">
-                <img class="tech-badge" src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Shell Script">
-                <img class="tech-badge" src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-                <img class="tech-badge" src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white" alt="MicrosoftSQLServer">
-                <img class="tech-badge" src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure">
-                <img class="tech-badge" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS">
-                <img class="tech-badge" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next JS">
-                <img class="tech-badge" src="https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray" alt="DjangoREST">
-                <img class="tech-badge" src="https://img.shields.io/badge/Apache%20Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black" alt="Apache Spark">
-                <img class="tech-badge" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt="Express.js">
-                <img class="tech-badge" src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-                <img class="tech-badge" src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" alt="JWT">
-                <img class="tech-badge" src="https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="Vue.js">
-                <img class="tech-badge" src="https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white" alt="WordPress">
-                <img class="tech-badge" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres">
-                <img class="tech-badge" src="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34" alt="Firebase">
-                <img class="tech-badge" src="https://img.shields.io/badge/splunk-%23000000.svg?style=for-the-badge&logo=splunk&logoColor=white" alt="Splunk">
-                <img class="tech-badge" src="https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white" alt="Swagger">
-                <img class="tech-badge" src="https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black" alt="Cisco">
-                <img class="tech-badge" src="https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi" alt="Raspberry Pi">
-                <img class="tech-badge" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
-                <img class="tech-badge" src="https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white" alt="Qt">
-                <img class="tech-badge" src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django">
-            </div>
-        </section>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2 class="section-title">projects</h2>
+        <div class="projects-grid" id="projects-container">
+            <div class="loading">Loading repositories from GitHub</div>
+        </div>
+    </section>
 
-        <!-- Contact / Socials Section -->
-        <section id="contact" class="py-20 section">
-            <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
-            <div class="text-center">
-                 <p class="text-lg text-gray-400 mb-8">Feel free to reach out on my socials!</p>
-                <div class="flex justify-center items-center gap-6">
-                    <a href="#" target="_blank" rel="noopener noreferrer"> <!-- Add your LinkedIn URL here -->
-                        <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" class="tech-badge">
-                    </a>
-                    <a href="mailto:your-email@example.com" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 text-lg">
-                        Email Me
-                    </a>
-                </div>
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">contact</h2>
+        <div class="about-content" style="text-align: center;">
+            <p class="about-text" style="margin-bottom: 2rem;">
+                Interested in collaborating or have a security concern? Feel free to reach out!
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/D4d00x" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <span>GitHub Profile</span>
+                </a>
+                <a href="https://www.linkedin.com/in/dzevad-dado-hatipovic-ab0637205" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:dado.cybersec@gmail.com" class="social-btn email">
+                    <span>Send Email</span>
+                </a>
             </div>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
-            <p>&copy; Site created 2018 by Dado Hatipovic. All Rights Reserved.</p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2018-2025 Dado Hatipovic. Crafted with &lt;code/&gt; and cybersecurity in mind.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.section');
+        // ============================================
+        // GitHub API Integration
+        // ============================================
+        const GITHUB_USERNAME = 'D4d00x';
+        const GITHUB_API = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
 
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
+        // Language color mapping (common languages)
+        const languageColors = {
+            JavaScript: '#f1e05a',
+            Python: '#3572A5',
+            Java: '#b07219',
+            'C#': '#178600',
+            'C++': '#f34b7d',
+            C: '#555555',
+            Go: '#00ADD8',
+            Rust: '#dea584',
+            TypeScript: '#2b7489',
+            PHP: '#4F5D95',
+            Ruby: '#701516',
+            Swift: '#ffac45',
+            Kotlin: '#F18E33',
+            Dart: '#00B4AB',
+            HTML: '#e34c26',
+            CSS: '#563d7c',
+            Shell: '#89e051',
+            Vue: '#41b883',
+            React: '#61dafb'
+        };
+
+        async function fetchGitHubRepos() {
+            const container = document.getElementById('projects-container');
+
+            try {
+                const response = await fetch(GITHUB_API + '?sort=updated&per_page=100');
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch repositories');
+                }
+
+                const repos = await response.json();
+
+                // Filter out forks if you want, and sort by stars
+                const filteredRepos = repos
+                    .filter(repo => !repo.fork) // Remove this line if you want to show forked repos
+                    .sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+                if (filteredRepos.length === 0) {
+                    container.innerHTML = '<p class="about-text" style="text-align: center;">No repositories found.</p>';
+                    return;
+                }
+
+                container.innerHTML = '';
+
+                filteredRepos.forEach(repo => {
+                    const card = createProjectCard(repo);
+                    container.appendChild(card);
                 });
-            }, {
-                threshold: 0.1
-            });
 
-            sections.forEach(section => {
-                observer.observe(section);
+            } catch (error) {
+                console.error('Error fetching GitHub repos:', error);
+                container.innerHTML = `
+                    <p class="about-text" style="text-align: center; color: var(--accent-red);">
+                        Error loading repositories. Please try again later.
+                    </p>
+                `;
+            }
+        }
+
+        function createProjectCard(repo) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+
+            const languageColor = languageColors[repo.language] || '#8b949e';
+
+            card.innerHTML = `
+                <div class="project-header">
+                    <h3 class="project-title">${repo.name}</h3>
+                </div>
+                <p class="project-description">
+                    ${repo.description || 'No description provided.'}
+                </p>
+                <div class="project-meta">
+                    ${repo.language ? `
+                        <span class="project-language">
+                            <span class="language-dot" style="background: ${languageColor}"></span>
+                            ${repo.language}
+                        </span>
+                    ` : ''}
+                    <span class="project-stats">⭐ ${repo.stargazers_count}</span>
+                    <span class="project-stats">🔱 ${repo.forks_count}</span>
+                </div>
+                <div class="project-links">
+                    <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="project-link">
+                        View Code
+                    </a>
+                    ${repo.homepage ? `
+                        <a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="project-link">
+                            Live Demo
+                        </a>
+                    ` : ''}
+                </div>
+            `;
+
+            return card;
+        }
+
+        // ============================================
+        // Navigation Scroll Effect
+        // ============================================
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ============================================
+        // Mobile Menu Toggle
+        // ============================================
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-open');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('mobile-open');
             });
+        });
+
+        // ============================================
+        // Initialize
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchGitHubRepos();
         });
     </script>
 
 </body>
 </html>
-
